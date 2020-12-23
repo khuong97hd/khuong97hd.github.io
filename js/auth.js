@@ -1,5 +1,5 @@
 // CHANGE THIS
-var host = 'https://ptnkchat.herokuapp.com';
+var host = 'https://hnue-chatbot-finish.herokuapp.com/';
 //var host = 'http://localhost:5000';
 setAppUrl(host);
 
