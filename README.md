@@ -1,1 +1,1 @@
-# Admin dashboard for [PTNK Chatible](https://github.com/ptnkchat/ptnkchat)
+# Admin dashboard for [HNUE Chatible](https://github.com/khuong97hd/hnue-chatbot)
