@@ -1,15 +1,5 @@
 // CHANGE THIS
 
-var host_val = $('#host').val();
-var host = '';
-if (host_val == "fpoly") {
-  host = 'https://fpoly-chatbot.herokuapp.com';
-} else if (host_val == "hnue") {
-  host = 'https://hnue-chatbot-2022.herokuapp.com';
-}
-//var host = 'http://localhost:5000';
-
-setAppUrl(host);
 
 if (getAppToken() !== null) {
   checkToken(
@@ -29,6 +19,18 @@ if (getAppToken() !== null) {
 
 $('#login-button').click(function (event) {
   event.preventDefault();
+
+  
+    var host_val = $('#host').val();
+    var host = '';
+    if (host_val == "fpoly") {
+      host = 'https://fpoly-chatbot.herokuapp.com';
+    } else if (host_val == "hnue") {
+      host = 'https://hnue-chatbot-2022.herokuapp.com';
+    }
+    //var host = 'http://localhost:5000';
+
+    setAppUrl(host);
 
   $('.wrapper').addClass('form-success');
   $('form').fadeOut(500);
