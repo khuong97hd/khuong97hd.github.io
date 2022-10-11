@@ -2,9 +2,9 @@
 
 var host_val = $('#host').val();
 var host = '';
-if (host_val = "hnue") {
-   host = 'https://hnue-chatbot-2022.herokuapp.com';
-} else if (host_val = "fpoly") {
+if (host_val == "hnue") {
+  host = 'https://hnue-chatbot-2022.herokuapp.com';
+} else if (host_val == "fpoly") {
   host = 'https://fpoly-chatbot.herokuapp.com/';
 }
 //var host = 'http://localhost:5000';
