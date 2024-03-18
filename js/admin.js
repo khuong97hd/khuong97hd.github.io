@@ -218,7 +218,7 @@ function forceMatch2User(id1, id2, gender1, gender2) {
     makeRequest(
       '/admin/edit/chatroom',
       'post',
-      { id1: id1, gender1: gender1, id2 : id2, gender2: gender2, type: 'remove' },
+      { id1: id1, gender1: gender1, id2 : id2, gender2: gender2, type: 'match' },
       function (res) {
         if (res.status === true) {
           alert("Kết nối thành công !")
