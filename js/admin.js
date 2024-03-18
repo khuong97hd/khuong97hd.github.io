@@ -199,6 +199,35 @@ function removeUsr(id) {
     );
 }
 
+// ad cứng 2 người vào phòng chat với nhau
+function forceMatch() {
+  // Lấy giá trị từ các ô input
+  var id1 = document.getElementById("id1").value;
+  var gender1 = document.getElementById("gender1").value;  
+  var id2 = document.getElementById("id2").value;
+  var gender2 = document.getElementById("gender2").value;
+
+  // Gọi hàm với các giá trị nhận được
+  forceMatch2User(id1, id2, gender1, gender2);
+}
+
+// ad cứng 2 người vào phòng chat với nhau
+function forceMatch2User(id1, id2, gender1, gender2) {
+  var cf = confirm('Bạn có chắc muốn kết nối 2 người này với nhau?');
+  if (cf)
+    makeRequest(
+      '/admin/edit/chatroom',
+      'post',
+      { id1: id1, gender1: gender1, id2 : id2, gender2: gender2, type: 'remove' },
+      function (res) {
+        if (res.status === true) {
+          alert("Kết nối thành công !")
+        }
+      },
+      errHandler
+    );
+}
+
 !(function ($) {
   $(document).on('click', 'ul.nav li.parent > a > span.icon', function () {
     $(this).find('em:first').toggleClass('glyphicon-minus');
